@@ -74,6 +74,95 @@ namespace Words {
 		const OUT = 6; // Из
 	}
 
+	class EActionType extends \Enum
+	{
+		const STAND = 0;
+		const TAKE = 1;
+		const WALK = 2;
+	}
+
+	$actions = [
+		[
+			'take' => [
+				'to' => 'брать',
+				'tenses' => [
+					'present' => [
+						'1st' => 'беру',
+						'2nd' => 'берёшь',
+						'3rd' => 'берёт',
+					],
+					'future' => [
+						'1st' => 'возьму',
+						'2nd' => 'возьмёшь',
+						'3rd' => 'возьмёт',
+					],
+					'past' => [
+						'masculine' => 'взял',
+						'feminine' => 'взяла',
+						'neuter' => 'взяло'
+					]
+				]
+			],
+			'throw' => [
+				'to' => 'бросать',
+				'tenses' => [
+					'present' => [
+						'1st' => 'бросаю',
+						'2nd' => 'бросаешь',
+						'3rd' => 'бросает',
+					],
+					'future' => [
+						'1st' => 'брошу',
+						'2nd' => 'бросишь',
+						'3rd' => 'бросит',
+					],
+					'past' => [
+						'masculine' => 'бросил',
+						'feminine' => 'бросила',
+						'neuter' => 'бросило'
+					]
+				]
+			],
+			'swing' => [
+				'to' => 'брать',
+				'tenses' => [
+					'present' => [
+						'1st' => 'беру',
+						'2nd' => 'берёшь',
+						'3rd' => 'берёт',
+					],
+					'future' => [
+						'1st' => 'возьму',
+						'2nd' => 'возьмёшь',
+						'3rd' => 'возьмёт',
+					],
+					'past' => [
+						'masculine' => 'взял',
+						'feminine' => 'взяла',
+						'neuter' => 'взяло'
+					]
+				]
+			],
+		]
+	];
+
+	$subjects = [
+		[
+			'name' => 'Педро',
+			'gender' => EGender::MASCULINE
+		]
+	];
+
+	$objects = [
+		'sword' => [
+			'name' => 'меч',
+			'gender' => EGender::MASCULINE,
+			'actions' => [
+				'take', 'throw', 'swing'
+			]
+		]
+	];
+
 	class Word
 	{
 		/** @var EWordType */
